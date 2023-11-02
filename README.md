@@ -4,6 +4,7 @@ https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
 
 File structure for the data folder
 
+```
 ├── data
 │   ├── adata_obs_meta.csv
 │   ├── adata_train.parquet
@@ -16,3 +17,4 @@ File structure for the data folder
 │   └── sample_submission.csv
 ├── Data_exploration.ipynb
 └── src
+```
