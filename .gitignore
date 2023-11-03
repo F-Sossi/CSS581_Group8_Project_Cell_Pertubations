@@ -1,0 +1,7 @@
+# Ignore everything in the data directory
+data/*
+models/*
+!data/.gitkeep
+
+.vscode/
+
