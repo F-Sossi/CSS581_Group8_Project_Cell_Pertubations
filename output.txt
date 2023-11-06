@@ -1,0 +1,21 @@
+Duplicated rows in de_train:
+0
+
+Duplicated rows in adata_obs_meta:
+239470
+
+Cell_type counts in de_train:
+NK cells              146
+T cells CD4+          146
+T regulatory cells    146
+T cells CD8+          142
+B cells                17
+Myeloid cells          17
+Name: cell_type, dtype: int64
+
+Cell_type counts in id_map:
+B cells          128
+Myeloid cells    127
+Name: cell_type, dtype: int64
+
+Sm_names in de_train but not in id_map: {'MLN 2238', 'Palbociclib', 'Crizotinib', 'Idelalisib', 'Dabrafenib', 'O-Demethylated Adapalene', 'LDN 193189', 'Dactolisib', 'Foretinib', 'Alvocidib', 'Porcn Inhibitor III', 'CHIR-99021', 'Oprozomib (ONX 0912)', 'Penfluridol', 'Linagliptin', 'Belinostat', 'R428'}Sm_names in id_map but not in de_train: set()

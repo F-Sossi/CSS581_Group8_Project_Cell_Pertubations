@@ -82,12 +82,14 @@ Predict the gene expression values for underrepresented cell types in `id_map.cs
 ## Approach
 1. Use the data from well-represented cell types to infer the behavior of underrepresented cell types when exposed to the same compounds.
 2. Analyze the existing relationships between cell types in the data.
+3. In order to predict the reactions of the B cells and the Myeloid cells what we need to do is add features to get similarities between Sm_names(chemicals) where we know how the B cells and the Myeloid cells reacted to chemicals that are similar in structure so we can infer the perturbations in unknown combinations of cell types and chemicals.
 
 ## Steps
 ### Data Preparation
 - Load all necessary datasets.
 - Clean and merge the datasets appropriately.
 - Ensure all necessary features are included for the analysis.
+- Add features for chemical similarity.
 
 ### Correlation Analysis
 - Conduct a correlation analysis to understand how gene expression in well-represented cell types correlates with that in underrepresented cell types.
