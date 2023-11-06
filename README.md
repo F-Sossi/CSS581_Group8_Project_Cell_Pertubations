@@ -70,3 +70,93 @@ You are to predict DE values for Myeloid and B cells for a majority of compounds
 5. Split your data based on the provided split guidelines, and evaluate your model's performance using appropriate metrics.
 6. Iterate on your model, tuning parameters, and perhaps exploring different modeling techniques to improve performance.
 7. Engage with the Kaggle community to learn from others, and maybe team up with other competitors to leverage different expertise.
+
+
+# Current plan
+
+# Gene Expression Prediction Plan
+
+## Objective
+Predict the gene expression values for underrepresented cell types in `id_map.csv` based on data from well-represented cell types in `de_train.parquet`.
+
+## Approach
+1. Use the data from well-represented cell types to infer the behavior of underrepresented cell types when exposed to the same compounds.
+2. Analyze the existing relationships between cell types in the data.
+
+## Steps
+### Data Preparation
+- Load all necessary datasets.
+- Clean and merge the datasets appropriately.
+- Ensure all necessary features are included for the analysis.
+
+### Correlation Analysis
+- Conduct a correlation analysis to understand how gene expression in well-represented cell types correlates with that in underrepresented cell types.
+- This will require identifying overlapping compound treatments across cell types.
+
+### Modeling Relationships
+- Train models to predict gene expression for each well-represented cell type.
+- Use these models to predict the gene expression for the same compounds in the underrepresented cell types.
+- Analyze the predictions to identify patterns or relationships between responses.
+
+### Inference
+- Establish relationships and use them to infer gene expression for underrepresented cell types for compounds with missing data.
+
+### Validation
+- Validate the model using any available overlap in data where underrepresented cell types have been tested.
+
+### Prediction
+- Predict the response of underrepresented cell types to compounds with currently no data based on inferred relationships.
+
+## Memory Efficiency Strategies
+- Optimize data types to reduce memory footprint.
+- Process data in chunks to avoid loading the entire dataset into memory.
+- Use sparse data structures for datasets with many zeros or missing values.
+- Calculate correlations in batches for subsets of genes to manage memory usage effectively.
+
+## Next Steps
+- Implement a more memory-efficient approach for correlation analysis.
+- Calculate correlations in smaller batches to ensure the process does not exceed available system memory.
+
+# Data Quality and Distribution Summary
+
+## Duplicated Rows
+- `de_train`: 0 duplicates
+- `adata_obs_meta`: 239,470 duplicates
+
+## Cell Type Distribution
+### In `de_train`
+- NK cells: 146
+- T cells CD4+: 146
+- T regulatory cells: 146
+- T cells CD8+: 142
+- B cells: 17
+- Myeloid cells: 17
+
+### In `id_map`
+- B cells: 128
+- Myeloid cells: 127
+
+## Compound Name Discrepancies
+### Present in `de_train` but not in `id_map`
+- O-Demethylated Adapalene
+- CHIR-99021
+- Penfluridol
+- Linagliptin
+- Palbociclib
+- Belinostat
+- Dactolisib
+- Dabrafenib
+- Porcn Inhibitor III
+- Idelalisib
+- LDN 193189
+- R428
+- MLN 2238
+- Alvocidib
+- Crizotinib
+- Foretinib
+- Oprozomib (ONX 0912)
+
+### Present in `id_map` but not in `de_train`
+- None
+
+
