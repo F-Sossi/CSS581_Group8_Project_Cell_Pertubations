@@ -1,0 +1,101 @@
+sm_name,cell_type,count
+Alvocidib,B cells,1
+Alvocidib,Myeloid cells,1
+Alvocidib,NK cells,1
+Alvocidib,T cells CD4+,1
+Alvocidib,T regulatory cells,1
+Belinostat,B cells,1
+Belinostat,Myeloid cells,1
+Belinostat,NK cells,1
+Belinostat,T cells CD4+,1
+Belinostat,T cells CD8+,1
+Belinostat,T regulatory cells,1
+CHIR-99021,B cells,1
+CHIR-99021,Myeloid cells,1
+CHIR-99021,NK cells,1
+CHIR-99021,T cells CD4+,1
+CHIR-99021,T cells CD8+,1
+CHIR-99021,T regulatory cells,1
+Crizotinib,B cells,1
+Crizotinib,Myeloid cells,1
+Crizotinib,NK cells,1
+Crizotinib,T cells CD4+,1
+Crizotinib,T cells CD8+,1
+Crizotinib,T regulatory cells,1
+Dabrafenib,B cells,1
+Dabrafenib,Myeloid cells,1
+Dabrafenib,NK cells,1
+Dabrafenib,T cells CD4+,1
+Dabrafenib,T cells CD8+,1
+Dabrafenib,T regulatory cells,1
+Dactolisib,B cells,1
+Dactolisib,Myeloid cells,1
+Dactolisib,NK cells,1
+Dactolisib,T cells CD4+,1
+Dactolisib,T cells CD8+,1
+Dactolisib,T regulatory cells,1
+Foretinib,B cells,1
+Foretinib,Myeloid cells,1
+Foretinib,NK cells,1
+Foretinib,T cells CD4+,1
+Foretinib,T cells CD8+,1
+Foretinib,T regulatory cells,1
+Idelalisib,B cells,1
+Idelalisib,Myeloid cells,1
+Idelalisib,NK cells,1
+Idelalisib,T cells CD4+,1
+Idelalisib,T cells CD8+,1
+Idelalisib,T regulatory cells,1
+LDN 193189,B cells,1
+LDN 193189,Myeloid cells,1
+LDN 193189,NK cells,1
+LDN 193189,T cells CD4+,1
+LDN 193189,T cells CD8+,1
+LDN 193189,T regulatory cells,1
+Linagliptin,B cells,1
+Linagliptin,Myeloid cells,1
+Linagliptin,NK cells,1
+Linagliptin,T cells CD4+,1
+Linagliptin,T cells CD8+,1
+Linagliptin,T regulatory cells,1
+MLN 2238,B cells,1
+MLN 2238,Myeloid cells,1
+MLN 2238,NK cells,1
+MLN 2238,T cells CD4+,1
+MLN 2238,T cells CD8+,1
+MLN 2238,T regulatory cells,1
+O-Demethylated Adapalene,B cells,1
+O-Demethylated Adapalene,Myeloid cells,1
+O-Demethylated Adapalene,NK cells,1
+O-Demethylated Adapalene,T cells CD4+,1
+O-Demethylated Adapalene,T cells CD8+,1
+O-Demethylated Adapalene,T regulatory cells,1
+Oprozomib (ONX 0912),B cells,1
+Oprozomib (ONX 0912),Myeloid cells,1
+Oprozomib (ONX 0912),NK cells,1
+Oprozomib (ONX 0912),T cells CD4+,1
+Oprozomib (ONX 0912),T regulatory cells,1
+Palbociclib,B cells,1
+Palbociclib,Myeloid cells,1
+Palbociclib,NK cells,1
+Palbociclib,T cells CD4+,1
+Palbociclib,T cells CD8+,1
+Palbociclib,T regulatory cells,1
+Penfluridol,B cells,1
+Penfluridol,Myeloid cells,1
+Penfluridol,NK cells,1
+Penfluridol,T cells CD4+,1
+Penfluridol,T cells CD8+,1
+Penfluridol,T regulatory cells,1
+Porcn Inhibitor III,B cells,1
+Porcn Inhibitor III,Myeloid cells,1
+Porcn Inhibitor III,NK cells,1
+Porcn Inhibitor III,T cells CD4+,1
+Porcn Inhibitor III,T cells CD8+,1
+Porcn Inhibitor III,T regulatory cells,1
+R428,B cells,1
+R428,Myeloid cells,1
+R428,NK cells,1
+R428,T cells CD4+,1
+R428,T cells CD8+,1
+R428,T regulatory cells,1
