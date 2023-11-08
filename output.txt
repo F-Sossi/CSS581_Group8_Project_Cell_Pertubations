@@ -1,181 +1,21 @@
-sm_names:
-['Clotrimazole' 'Mometasone Furoate' 'Idelalisib' 'Vandetanib' 'Bosutinib'
- 'Ceritinib' 'Lamivudine' 'Crizotinib' 'Cabozantinib' 'Flutamide'
- 'Dasatinib' 'Selumetinib' 'Trametinib' 'ABT-199 (GDC-0199)' 'Oxybenzone'
- 'Vorinostat' 'Raloxifene' 'Linagliptin' 'Lapatinib' 'Canertinib'
- 'Disulfiram' 'Vardenafil' 'Palbociclib' 'Ricolinostat' 'Dabrafenib'
- 'Proscillaridin A;Proscillaridin-A' 'IN1451' 'Ixabepilone'
- 'CEP-18770 (Delanzomib)' 'RG7112' 'MK-5108' 'Resminostat' 'IMD-0354'
- 'Alvocidib' 'LY2090314' 'Methotrexate' 'LDN 193189' 'Tacalcitol'
- 'Colchicine' 'R428' 'TL_HRAS26' 'BMS-387032' 'CGP 60474'
- 'TIE2 Kinase Inhibitor' 'PD-0325901' 'Isoniazid' 'GSK-1070916'
- 'Masitinib' 'Saracatinib' 'CC-401' 'Decitabine' 'Ketoconazole'
- 'HYDROXYUREA' 'BAY 61-3606' 'Navitoclax' 'Porcn Inhibitor III'
- 'GW843682X' 'Prednisolone' 'Tamatinib' 'Tosedostat' 'GSK256066'
- 'MGCD-265' 'AZD-8330' 'RN-486' 'Amiodarone' 'Belinostat' 'RVX-208'
- 'GO-6976' 'Scriptaid' 'HMN-214' 'SB525334' 'AVL-292' 'BMS-777607'
- 'AZD4547' 'Foretinib' 'Tivozanib' 'Quizartinib' 'IKK Inhibitor VII'
- 'UNII-BXU45ZH6LI' 'Chlorpheniramine' 'Tivantinib' 'CEP-37440' 'TPCA-1'
- 'AZ628' 'OSI-930' 'AZD3514' 'Vanoxerine' 'PF-03814735' 'MLN 2238'
- 'Dovitinib' 'K-02288' 'Midostaurin' 'I-BET151' 'STK219801' 'PRT-062607'
- 'AT 7867' 'Sunitinib' 'Penfluridol' 'BMS-536924' 'Perhexiline' 'BI-D1870'
- 'FK 866' 'Mubritinib (TAK 165)' 'Doxorubicin' 'Pomalidomide' 'Colforsin'
- 'Phenylbutazone' 'Protriptyline' 'Buspirone' 'Clomipramine' 'Alogliptin'
- 'Nefazodone' 'ABT737' 'Dactolisib' 'Nilotinib' 'Defactinib' 'PF-04691502'
- 'GLPG0634' 'Sgc-cbp30' 'BX 912' 'SCH-58261' 'Ruxolitinib' 'BAY 87-2243'
- 'O-Demethylated Adapalene' 'YK 4-279' 'Ganetespib (STA-9090)' 'SLx-2119'
- 'Oprozomib (ONX 0912)' 'Desloratadine' 'Pitavastatin Calcium' 'TR-14035'
- 'AT13387' 'CHIR-99021' 'RG7090' 'AMD-070 (hydrochloride)' 'BMS-265246'
- 'Tipifarnib' 'Imatinib' 'Topotecan' 'Clemastine'
- '5-(9-Isopropyl-8-methyl-2-morpholino-9H-purin-6-yl)pyrimidin-2-amine'
- 'CGM-097' 'TGX 221' 'Azacitidine' 'Atorvastatin' 'Riociguat']
+Duplicated rows in de_train:
+0
 
-sm_names_count:
-Penfluridol                                                             6
-Dabrafenib                                                              6
-O-Demethylated Adapalene                                                6
-Palbociclib                                                             6
-Porcn Inhibitor III                                                     6
-Linagliptin                                                             6
-Idelalisib                                                              6
-MLN 2238                                                                6
-LDN 193189                                                              6
-Crizotinib                                                              6
-Dactolisib                                                              6
-CHIR-99021                                                              6
-Foretinib                                                               6
-Belinostat                                                              6
-R428                                                                    6
-Alvocidib                                                               5
-Oprozomib (ONX 0912)                                                    5
-BI-D1870                                                                4
-Doxorubicin                                                             4
-Sunitinib                                                               4
-Perhexiline                                                             4
-BMS-536924                                                              4
-Pomalidomide                                                            4
-Mubritinib (TAK 165)                                                    4
-FK 866                                                                  4
-Colforsin                                                               4
-Phenylbutazone                                                          4
-Chlorpheniramine                                                        4
-Tivantinib                                                              4
-CEP-37440                                                               4
-TPCA-1                                                                  4
-AZ628                                                                   4
-OSI-930                                                                 4
-AZD3514                                                                 4
-STK219801                                                               4
-PF-03814735                                                             4
-Dovitinib                                                               4
-K-02288                                                                 4
-Midostaurin                                                             4
-I-BET151                                                                4
-Protriptyline                                                           4
-PRT-062607                                                              4
-AT 7867                                                                 4
-Vanoxerine                                                              4
-AMD-070 (hydrochloride)                                                 4
-RG7090                                                                  4
-AT13387                                                                 4
-TR-14035                                                                4
-Clotrimazole                                                            4
-Riociguat                                                               4
-Flutamide                                                               4
-Cabozantinib                                                            4
-Lamivudine                                                              4
-Ceritinib                                                               4
-Bosutinib                                                               4
-Vandetanib                                                              4
-Pitavastatin Calcium                                                    4
-Desloratadine                                                           4
-SLx-2119                                                                4
-ABT737                                                                  4
-YK 4-279                                                                4
-BAY 87-2243                                                             4
-Ruxolitinib                                                             4
-SCH-58261                                                               4
-BX 912                                                                  4
-Sgc-cbp30                                                               4
-GLPG0634                                                                4
-PF-04691502                                                             4
-Defactinib                                                              4
-Nilotinib                                                               4
-UNII-BXU45ZH6LI                                                         4
-Nefazodone                                                              4
-Alogliptin                                                              4
-Clomipramine                                                            4
-Buspirone                                                               4
-Ganetespib (STA-9090)                                                   4
-Lapatinib                                                               4
-Canertinib                                                              4
-Disulfiram                                                              4
-Vardenafil                                                              4
-Ricolinostat                                                            4
-Proscillaridin A;Proscillaridin-A                                       4
-IN1451                                                                  4
-AZD4547                                                                 4
-CEP-18770 (Delanzomib)                                                  4
-RG7112                                                                  4
-MK-5108                                                                 4
-IMD-0354                                                                4
-LY2090314                                                               4
-Methotrexate                                                            4
-Tacalcitol                                                              4
-Colchicine                                                              4
-Ixabepilone                                                             4
-Topotecan                                                               4
-Clemastine                                                              4
-5-(9-Isopropyl-8-methyl-2-morpholino-9H-purin-6-yl)pyrimidin-2-amine    4
-CGM-097                                                                 4
-TGX 221                                                                 4
-Azacitidine                                                             4
-Atorvastatin                                                            4
-Raloxifene                                                              4
-Tipifarnib                                                              4
-Imatinib                                                                4
-Dasatinib                                                               4
-Selumetinib                                                             4
-Trametinib                                                              4
-ABT-199 (GDC-0199)                                                      4
-Oxybenzone                                                              4
-Vorinostat                                                              4
-Mometasone Furoate                                                      4
-GSK256066                                                               4
-MGCD-265                                                                4
-AZD-8330                                                                4
-RN-486                                                                  4
-Amiodarone                                                              4
-RVX-208                                                                 4
-GO-6976                                                                 4
-TL_HRAS26                                                               4
-HMN-214                                                                 4
-SB525334                                                                4
-AVL-292                                                                 4
-BMS-777607                                                              4
-BMS-265246                                                              4
-Tivozanib                                                               4
-Quizartinib                                                             4
-IKK Inhibitor VII                                                       4
-Scriptaid                                                               4
-BMS-387032                                                              4
-TIE2 Kinase Inhibitor                                                   4
-PD-0325901                                                              4
-Isoniazid                                                               4
-GSK-1070916                                                             4
-Masitinib                                                               4
-Saracatinib                                                             4
-Tosedostat                                                              4
-Decitabine                                                              4
-Ketoconazole                                                            4
-HYDROXYUREA                                                             4
-BAY 61-3606                                                             4
-Navitoclax                                                              4
-GW843682X                                                               4
-Prednisolone                                                            4
-Tamatinib                                                               4
-CC-401                                                                  4
-CGP 60474                                                               3
-Resminostat                                                             3
-Name: sm_name, dtype: int64
+Duplicated rows in adata_obs_meta:
+239470
 
+Cell_type counts in de_train:
+NK cells              146
+T cells CD4+          146
+T regulatory cells    146
+T cells CD8+          142
+B cells                17
+Myeloid cells          17
+Name: cell_type, dtype: int64
+
+Cell_type counts in id_map:
+B cells          128
+Myeloid cells    127
+Name: cell_type, dtype: int64
+
+Sm_names in de_train but not in id_map: {'LDN 193189', 'Palbociclib', 'Porcn Inhibitor III', 'Alvocidib', 'O-Demethylated Adapalene', 'Crizotinib', 'CHIR-99021', 'Idelalisib', 'Dabrafenib', 'Oprozomib (ONX 0912)', 'R428', 'Penfluridol', 'Linagliptin', 'MLN 2238', 'Foretinib', 'Dactolisib', 'Belinostat'}Sm_names in id_map but not in de_train: set()
