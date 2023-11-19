@@ -19,9 +19,11 @@ File structure for the data folder
 └── src
 ```
 
-### Requirments (add to these as we go)
-pyarrow -> for file access
-Pandas
+### Requirements (add to these as we go)
+in requirements.txt to install run
+```angular2html
+pip install -r requirements.txt
+```
 
 
 # Dataset Description:
