@@ -163,4 +163,28 @@ Predict the gene expression values for underrepresented cell types in `id_map.cs
 ### Present in `id_map` but not in `de_train`
 - None
 
+### Clustered sets
+```
+Cluster 0: 89 rows
+Cluster 1: 146 rows
+Cluster 2: 28 rows
+Cluster 3: 171 rows
+Cluster 4: 94 rows
+Cluster 5: 8 rows
+Cluster 6: 4 rows
+Cluster 7: 46 rows
+Cluster 8: 24 rows
+Cluster 9: 4 rows
+Cluster 0: {'Condition 1': True, 'Condition 2': True, 'Condition 3': True}
+Cluster 1: {'Condition 1': True, 'Condition 2': True, 'Condition 3': True}
+Cluster 2: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+Cluster 3: {'Condition 1': True, 'Condition 2': True, 'Condition 3': True}
+Cluster 4: {'Condition 1': True, 'Condition 2': True, 'Condition 3': True}
+Cluster 5: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+Cluster 6: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+Cluster 7: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+Cluster 8: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+Cluster 9: {'Condition 1': False, 'Condition 2': False, 'Condition 3': False}
+```
+
 
