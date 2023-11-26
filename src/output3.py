@@ -28,7 +28,7 @@ encoder = joblib.load('../data/encoder.joblib')
 X_id_map_tensor = preprocess_data(id_map_enriched, encoder)
 
 # Load the trained model
-model_path = '../models/complex_net_633.pth'
+model_path = '../models/fine_tuned_complex_net.pth'
 input_size = X_id_map_tensor.shape[1]
 output_size = 18211  # Number of gene expressions
 model = ComplexNet(input_size, output_size)

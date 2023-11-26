@@ -17,7 +17,7 @@ class ComplexNet(nn.Module):
         self.layer5 = nn.Linear(256, 128)
         self.relu5 = nn.ReLU()
 
-        # New layers
+        # New layers for fine-tuning
         self.layer6 = nn.Linear(128, 128)
         self.relu6 = nn.ReLU()
         self.layer7 = nn.Linear(128, 64)
@@ -49,4 +49,5 @@ class ComplexNet(nn.Module):
         # Final output
         x = self.layer10(x)
         return x
+
 
