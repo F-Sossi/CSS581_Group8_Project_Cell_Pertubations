@@ -22,7 +22,7 @@ test_set = pd.concat([test_set_b_cells, test_set_myeloid_cells])
 gene_expression_columns = data.select_dtypes(include=[np.number]).columns.tolist()
 
 # Exclude non-gene expression columns
-non_gene_columns = ['cell_type', 'sm_name', 'Cluster', 'sm_links_id', 'control', 'SMILES']  # Add any other non-gene expression columns here
+non_gene_columns = ['cell_type', 'sm_name', 'sm_links_id', 'control', 'Cluster', 'SMILES']  # Add any other non-gene expression columns here
 gene_expression_columns = [col for col in gene_expression_columns if col not in non_gene_columns]
 
 # Select only the required columns for the train and test sets
@@ -31,8 +31,8 @@ test_set = test_set
 
 # Prepare input features using OneHotEncoder
 encoder = OneHotEncoder()
-X_train = encoder.fit_transform(train_set[['cell_type', 'sm_name']]).toarray()
-X_test = encoder.transform(test_set[['cell_type', 'sm_name']]).toarray()
+X_train = encoder.fit_transform(train_set[['cell_type', 'sm_name', 'Cluster', 'SMILES']]).toarray()
+X_test = encoder.transform(test_set[['cell_type', 'sm_name', 'Cluster', 'SMILES']]).toarray()
 
 joblib.dump(encoder, '../data/encoder.joblib')  # Save the encoder
 
@@ -44,11 +44,8 @@ y_test = test_set[gene_expression_columns].values
 X_train, y_train = torch.tensor(X_train, dtype=torch.float32), torch.tensor(y_train, dtype=torch.float32)
 X_test, y_test = torch.tensor(X_test, dtype=torch.float32), torch.tensor(y_test, dtype=torch.float32)
 
-# Rest of your neural network and training code...
-
-
 # DataLoader
-train_loader = DataLoader(TensorDataset(X_train, y_train), batch_size=32, shuffle=True)
+train_loader = DataLoader(TensorDataset(X_train, y_train), batch_size=650, shuffle=True)
 
 # Assuming X_train and y_train are your training data and labels
 model = ComplexNet(X_train.shape[1], y_train.shape[1])
@@ -56,7 +53,7 @@ optimizer = optim.Adam(model.parameters(), lr=0.001)
 criterion = nn.MSELoss()
 
 # Training loop
-for epoch in range(2000):
+for epoch in range(5000):
     optimizer.zero_grad()
     outputs = model(X_train)
     loss = criterion(outputs, y_train)
@@ -97,6 +94,6 @@ comparison_df = pd.concat([actual_df, predictions_df])
 comparison_df.to_csv("../data/model_predictions_vs_actual.csv", index=False)
 
 # After training the model
-model_path = '../models/complex_net.pth'
+model_path = '../models/complex_net_633.pth'
 torch.save(model.state_dict(), model_path)
 

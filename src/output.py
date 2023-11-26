@@ -18,7 +18,7 @@ id_map_file_path = '../data/id_map.csv'
 X_id_map_tensor = preprocess_data(id_map_file_path, encoder)
 
 # Load the trained model
-model_path = '../models/complex_net.pth'
+model_path = '../models/complex_net_633.pth'
 input_size = X_id_map_tensor.shape[1]
 output_size = 18211  # Number of gene expressions
 model = ComplexNet(input_size, output_size)
