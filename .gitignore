@@ -1,7 +1,7 @@
 # Ignore everything in the data directory
 data/*
 gen_data/*
-models/*
+
 !data/.gitkeep
 !models/.gitkeep
 
