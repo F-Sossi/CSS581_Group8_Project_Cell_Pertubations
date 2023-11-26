@@ -31,7 +31,7 @@ for i in range(len(fingerprints)):
 
 # Clustering
 clustering = AgglomerativeClustering(n_clusters=None, affinity='precomputed', linkage='complete',
-                                     distance_threshold=0.95)
+                                     distance_threshold=0.8)
 data['Cluster'] = clustering.fit_predict(1 - similarity_matrix)
 
 # Group by cluster and check conditions
