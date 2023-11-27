@@ -1,6 +1,6 @@
 import pandas as pd
 import torch
-from NnNet import ComplexNet
+from NnNet2 import ComplexNet
 import joblib
 
 def preprocess_data(df, encoder):
