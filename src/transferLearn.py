@@ -60,7 +60,7 @@ model.to(device)  # Move the model to the GPU
 optimizer = optim.Adam(model.parameters(), lr=0.0001)
 
 # Training loop
-for epoch in range(500):  # Adjust the number of epochs as needed
+for epoch in range(500):  # Adjust the number of epochs as needed this
     model.train()
     for X_batch, y_batch in train_loader:
         X_batch, y_batch = X_batch.to(device), y_batch.to(device)  # Move batch data to the GPU
