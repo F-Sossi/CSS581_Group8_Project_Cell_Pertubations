@@ -1,10 +1,20 @@
 # Ignore everything in the data directory
 data/*
 gen_data/*
+encoders/*
+output/*
+models/*
+
 
 !data/.gitkeep
 !models/.gitkeep
+!output/.gitkeep
+!gen_data/.gitkeep
+!encoders/.gitkeep
+
 
 .venv/
 .vscode/
+.idea/
+```
 
