@@ -96,6 +96,31 @@ def compute_group_stats(data, group_cols, data_cols):
     return mean_df, std_df
 
 
+# def preprocess_data(data, gene_columns):
+#     """
+#     Preprocess the dataset to prepare for model training. This includes encoding categorical features,
+#     filling missing values, and computing group statistics.
+#
+#     Parameters:
+#     - data: pandas DataFrame containing the raw data.
+#     - gene_columns: list of strings, column names corresponding to gene data.
+#
+#     Returns:
+#     - A tuple of processed features: (encoded_features, mean_features, std_features, X, y)
+#       where 'X' is the feature matrix and 'y' is the target variable.
+#     """
+#     encoded_features = encode_categorical_features(data, ['cell_type', 'sm_name'])
+#     data = fill_missing_values(data, gene_columns)
+#     mean_features, std_features = compute_group_stats(data, ['cell_type', 'sm_name'], gene_columns)
+#     data = data.merge(mean_features, on=['cell_type', 'sm_name'], suffixes=('', '_mean'))
+#     data = data.merge(std_features, on=['cell_type', 'sm_name'], suffixes=('', '_std'))
+#
+#     mean_std_features = data[[col for col in data.columns if '_mean' in col or '_std' in col]]
+#     scaled_gene_data = data[gene_columns].values
+#     X = np.concatenate([encoded_features, scaled_gene_data, mean_std_features], axis=1)
+#     y = data[gene_columns].values
+#
+#     return encoded_features, mean_features, std_features, X, y
 def preprocess_data(data, gene_columns):
     """
     Preprocess the dataset to prepare for model training. This includes encoding categorical features,
@@ -109,15 +134,28 @@ def preprocess_data(data, gene_columns):
     - A tuple of processed features: (encoded_features, mean_features, std_features, X, y)
       where 'X' is the feature matrix and 'y' is the target variable.
     """
+    # Keep the encoding for both 'cell_type' and 'sm_name'
     encoded_features = encode_categorical_features(data, ['cell_type', 'sm_name'])
-    data = fill_missing_values(data, gene_columns)
-    mean_features, std_features = compute_group_stats(data, ['cell_type', 'sm_name'], gene_columns)
-    data = data.merge(mean_features, on=['cell_type', 'sm_name'], suffixes=('', '_mean'))
-    data = data.merge(std_features, on=['cell_type', 'sm_name'], suffixes=('', '_std'))
 
+    # Fill missing values in the data
+    data = fill_missing_values(data, gene_columns)
+
+    # Compute mean and standard deviation statistics grouped by 'sm_name' only
+    mean_features, std_features = compute_group_stats(data, ['sm_name'], gene_columns)
+
+    # Merge the computed mean and standard deviation with the original data
+    # Note that the merge is based on 'sm_name' only
+    data = data.merge(mean_features, on='sm_name', suffixes=('', '_mean'))
+    data = data.merge(std_features, on='sm_name', suffixes=('', '_std'))
+
+    # Extract the mean and standard deviation features
     mean_std_features = data[[col for col in data.columns if '_mean' in col or '_std' in col]]
+
+    # Prepare the feature matrix X by concatenating encoded features, scaled gene data, and mean_std features
     scaled_gene_data = data[gene_columns].values
     X = np.concatenate([encoded_features, scaled_gene_data, mean_std_features], axis=1)
+
+    # Prepare the target variable y
     y = data[gene_columns].values
 
     return encoded_features, mean_features, std_features, X, y

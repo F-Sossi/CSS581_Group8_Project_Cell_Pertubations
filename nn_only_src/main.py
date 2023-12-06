@@ -10,16 +10,19 @@ import warnings
 
 def main():
 
+    """
+    Main function for training and evaluating the model.
+    assumes the data is in the data folder as per the README
+    First run will do the initial preprocessing and save the preprocessed data to a pickle file
+    Subsequent runs will load the preprocessed data from the pickle file
+    This will speed up subsequent runs
+    """
+
     warnings.filterwarnings("ignore")
 
     # Set device for training (GPU or CPU)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print(f"Using device: {device}")
-
-    # # Load and preprocess the data
-    # data = dp.load_data('../data/de_train.parquet')
-    # gene_columns = dp.get_gene_columns(data)
-    # encoded_features, mean_features, std_features, X, y = dp.preprocess_data(data, gene_columns)
 
     preprocessed_data_path = '../data/preprocessed_data.pkl'
 
