@@ -2,7 +2,7 @@
 
 https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
 
-### Requirements 
+### Running the project
 Download and populate the data folder with the data from the kaggle competition as per the below file structure. 
 
 ```angular2html
