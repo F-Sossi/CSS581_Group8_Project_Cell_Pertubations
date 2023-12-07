@@ -76,7 +76,7 @@ class ComplexNet(nn.Module):
         self.layer1 = self._create_layer(input_size, 256)
         self.layer2 = self._create_layer(256, 256)
         transformer_encoder_layer = nn.TransformerEncoderLayer(
-            d_model=256, nhead=8, dim_feedforward=512, dropout=0.1
+            d_model=256, nhead=16, dim_feedforward=512, dropout=0.1
         )
         self.transformer_encoder = nn.TransformerEncoder(transformer_encoder_layer, num_layers=1)
         self.layer3 = nn.Linear(256, output_size)

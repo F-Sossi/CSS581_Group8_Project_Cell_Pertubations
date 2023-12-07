@@ -1,10 +1,9 @@
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.utils import resample
 from torch.utils.data import TensorDataset
 import torch
+import joblib
 
 
 def load_data(file_path):
@@ -26,7 +25,10 @@ def encode_categorical_features(data, columns):
     - A NumPy array containing the one-hot encoded features.
     """
     encoder = OneHotEncoder()
-    return encoder.fit_transform(data[columns])
+    # Save the fitted encoder to a file
+    joblib.dump(encoder, 'encoder.joblib')
+    output = encoder.fit_transform(data[columns]).toarray()
+    return output
 
 
 def get_gene_columns(data):
@@ -41,6 +43,7 @@ def get_gene_columns(data):
     """
     return data.columns.difference(['cell_type', 'sm_name', 'sm_lincs_id', 'SMILES', 'control'])
 
+
 def fill_missing_values(data, columns):
     """
     Fill missing values in the specified columns of the data with the mean of each column.
@@ -54,6 +57,7 @@ def fill_missing_values(data, columns):
     """
     data[columns] = data[columns].fillna(data[columns].mean())
     return data
+
 
 def compute_group_stats(data, group_cols, data_cols):
     """
@@ -96,6 +100,7 @@ from sklearn.preprocessing import OneHotEncoder
 import numpy as np
 import pandas as pd
 
+
 def preprocess_data(data, gene_columns):
     """
     Preprocess the dataset to prepare for model training. This includes encoding categorical features,
@@ -115,6 +120,8 @@ def preprocess_data(data, gene_columns):
     encoder = OneHotEncoder()
     encoded_features = encoder.fit_transform(data[['cell_type', 'sm_name']]).toarray()
     encoded_feature_names = encoder.get_feature_names_out(['cell_type', 'sm_name'])
+
+    joblib.dump(encoder, '../encoders/encoder_rev2.joblib')
 
     # Fill missing values in the data
     data = fill_missing_values(data, gene_columns)
@@ -143,27 +150,9 @@ def preprocess_data(data, gene_columns):
     return encoded_features, mean_features, std_features, X, y, all_column_names
 
 
-# def preprocess_data(data):
-#     """
-#     Apply necessary preprocessing steps to the data.
-#     """
-#     # Example: One-hot encoding for categorical columns
-#     encoder = OneHotEncoder()
-#     encoded_columns = encoder.fit_transform(data[['cell_type', 'sm_name', 'Cluster', 'SMILES']]).toarray()
-#
-#     # Normalize or scale other columns if necessary
-#     # scaler = StandardScaler()
-#     # scaled_columns = scaler.fit_transform(data[['other_columns']])
-#
-#     # Merge encoded and scaled columns back with the data
-#     processed_data = pd.concat([data.drop(['cell_type', 'sm_name', 'Cluster', 'SMILES'], axis=1),
-#                                 pd.DataFrame(encoded_columns)], axis=1)
-#     return processed_data
-
-
 def oversample_data(data, column, desired_number=200):
     """
-    Perform oversampling to balance the dataset.
+    Perform oversampling to balance the dataset. not used in the final model
     """
     minority_data = data[data[column].isin(['B cells', 'Myeloid cells'])]
     oversampled_data = resample(minority_data, replace=True, n_samples=desired_number, random_state=42)
@@ -185,3 +174,13 @@ def split_data(data, test_size=0.2):
     Split the data into training and validation sets.
     """
     return train_test_split(data, test_size=test_size, random_state=42)
+
+
+def process_features(data, encoder, mean_features, std_features):
+    """
+    Process the features of the data to prepare for inference.
+    """
+    # Apply the same one-hot encoding as was done to the training data
+    encoded_features = encoder.transform(data[['cell_type', 'sm_name']]).toarray()
+
+    return encoded_features
