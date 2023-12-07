@@ -5,8 +5,7 @@ import torch.nn as nn
 class TransformerNN(nn.Module):
     def __init__(self, num_features, num_labels, d_model=128, num_heads=8, num_layers=6, dropout=0.3):
         super(TransformerNN, self).__init__()
-        # Assuming these are constants or can be derived from the data
-        self.num_target_encodings = 18211
+        self.num_target_encodings = 18211  # Will throw error if this changes
         self.num_sparse_features = num_features - self.num_target_encodings
 
         self.sparse_feature_embedding = nn.Linear(self.num_sparse_features, d_model)
