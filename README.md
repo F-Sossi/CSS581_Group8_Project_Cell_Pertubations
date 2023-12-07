@@ -2,10 +2,8 @@
 
 https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
 
-```
-
 ### Requirements 
-Download and populate the data folder with the data from the kaggle competition.
+Download and populate the data folder with the data from the kaggle competition as per the below file structure. 
 
 ```angular2html
 pip install -r requirements.txt
