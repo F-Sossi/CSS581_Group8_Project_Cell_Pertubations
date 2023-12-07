@@ -2,29 +2,60 @@
 
 https://www.kaggle.com/competitions/open-problems-single-cell-perturbations
 
-File structure for the data folder
-
-```
-├── data
-│   ├── adata_obs_meta.csv
-│   ├── adata_train.parquet
-│   ├── de_train.parquet
-│   ├── id_map.csv
-│   ├── multiome_obs_meta.csv
-│   ├── multiome_train.parquet
-│   ├── multiome_var_meta.csv
-│   ├── open-problems-single-cell-perturbations.zip
-│   └── sample_submission.csv
-├── Data_exploration.ipynb
-└── src
 ```
 
-### Requirements (add to these as we go)
-in requirements.txt to install run
+### Requirements 
+Download and populate the data folder with the data from the kaggle competition.
+
 ```angular2html
 pip install -r requirements.txt
 ```
 
+File structure for the data folder
+
+```
+├── data
+│   ├── adata_excluded_ids.csv
+│   ├── adata_obs_meta.csv
+│   ├── adata_train.parquet
+│   ├── de_df.csv
+│   ├── de_train_clustered.parquet
+│   ├── de_train.parquet
+│   ├── de_train_updated.parquet
+│   ├── id_map.csv
+│   ├── lincs_id_compound_mapping.parquet
+│   ├── model_predictions_vs_actual.csv
+│   ├── multiome_obs_meta.csv
+│   ├── multiome_train.parquet
+│   ├── multiome_var_meta.csv
+│   └──sample_submission.csv
+├── encoders
+├── models
+├── nn_auto_rev2
+│   ├── data_preprocessing.py
+│   ├── main.py
+│   ├── model.py
+│   ├── train.py
+│   └── utils.py
+├── nn_only_src
+│   ├── data_processing.py
+│   ├── evaluation.py
+│   ├── main.py
+│   ├── model.py
+│   └── training.py
+├── output
+├── output.txt
+├── README.md
+└── requirements.txt
+
+```
+
+### Requirements 
+Download and populate the data folder with the data from the kaggle competition.
+
+```angular2html
+pip install -r requirements.txt
+```
 
 ### Repository for Predictive Modeling in Cellular Response Analysis
 
